@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* 1. GLOBAL RESETS & THEME PROFILE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .head   {
+            background-color : rgb(42, 46, 35) ; 
+            height: 16cm ;
+            width: 35.5cm ;
+        }
+        /* Import a clean modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+  background-color: #0d0d0d; /* Deep premium dark background */
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Typography styles */
+.section-title {
+  letter-spacing: 3px;
+  color: #ff758f; /* Accent color for the section indicator */
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  margin-top: -8%;
+}
+
+.sub-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Call to Action Buttons */
+.cta-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #fc3156;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #ff4d6d;
+  box-shadow: 0 4px 15px rgba(253, 125, 148, 0.4);
+}
+
+.btn-secondary {
+  border: 2px solid #333;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  border-color: #ff758f;
+}
+
+.divider-text {
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Quote Layout */
+.quote {
+  font-size: 20px;
+  font-style: italic;
+  color: #e0e0e0;
+  line-height: 1.6;
+  border-left: 4px solid #ff758f;
+  padding-left: 20px;
+  margin: 0 0 40px 0;
+}
+
+/* Statistics Layout */
+.stats-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff758f; /* Makes the number stand out immediately */
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #a0a0a0;
+  line-height: 1;
+}
+
+/* Responsive adjustment for tablets/phones */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+}
+/* Styling variables for easy customization */
+:root {
+  --bg-color: #0d0d0d;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-color: #ff758f; /* Feel free to change this color */
+  --card-bg: #161616;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.about-section {
+  padding: 80px 20px;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Intro Content Styling */
+.section-tag {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-color);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.about-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.about-text.highlight {
+  font-size: 18px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.about-text strong {
+  color: var(--accent-color);
+}
+
+/* Skills Content Styling */
+.skills-content {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #222;
+}
+
+.skills-heading {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.skills-sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+/* Skill Tags Layout */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background-color: rgba(255, 117, 143, 0.1); /* Subtle transparent accent color */
+  color: antiquewhite;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 117, 143, 0.2);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+
+        #img2  {
+            margin-left: 16% ;
+            margin-top: -2.4cm ;
+            max-height: 37.5% ;
+            max-width: 27.5% ;
+            position: relative ;
+            border: 2px solid rgb(73, 225, 245);
+            border-radius: 50%;
+            
+        }
+        
+        
+
+        #btni   {
+            margin-left: 1% ;
+            margin-top : -13cm ;
+            float: right ;
+            color:aliceblue ;
+            text-decoration: none ;
+            
+        }
+        #btn:hover   {
+            color : red ;
+        }
+        #btn:visitor   {
+            color : black ;
+        }
+
+
+
+
+
+
+        
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #0b110e; /* Matte dark olive black background */
+      color: #e0e6e3; /* High-contrast clean off-white text */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* 2. NAVIGATION BAR */
+    header {
+      background: rgba(11, 17, 14, 0.85);
+      backdrop-filter: blur(8px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(118, 160, 134, 0.1);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+    nav a {
+      color: #b0bab5;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 30px;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #a3e2bc;
+    }
+
+    /* CONTAINER SPACING WRAPPER */
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 20px 60px 20px; /* Accounts for fixed navbar header */
+    }
+
+    /* 3. BLOG & NEWS SPLIT LAYOUT */
+    .blog-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      margin-bottom: 100px;
+    }
+    .sidebar {
+      position: sticky;
+      top: 120px;
+      height: fit-content;
+    }
+    .sidebar h1 {
+      font-size: 1.3rem;
+      color: #76a086;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    .sidebar .main-title {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+    .quote-box {
+      border-left: 3px solid #76a086;
+      padding-left: 20px;
+    }
+    .quote-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: #76a086;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    .quote-text {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #b0bab5;
+    }
+    .quote-author {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .blog-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .blog-card {
+      background: #141f1a;
+      border: 1px solid rgba(118, 160, 134, 0.1);
+      border-radius: 12px;
+      padding: 24px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-3px);
+      background: #192720;
+      border-color: rgba(118, 160, 134, 0.3);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    .blog-details {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .blog-date {
+      font-size: 0.8rem;
+      color: #76a086;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .blog-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .blog-card:hover .blog-title {
+      color: #a3e2bc;
+    }
+    .arrow-icon {
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #76a086;
+      transition: all 0.3s;
+    }
+    .blog-card:hover .arrow-icon {
+      background: #76a086;
+      color: #0b110e;
+    }
+
+    /* 4. SEPARATE PROJECTS SECTION */
+    .projects-section {
+      border-top: 1px solid rgba(118, 160, 134, 0.1);
+      padding-top: 80px;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #76a086;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 25px;
+    }
+    .project-card {
+      background: #141f1a;
+      border: 1px solid rgba(118, 160, 134, 0.1);
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 240px;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(118, 160, 134, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      background: #192720;
+    }
+    .project-header h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .project-description {
+      font-size: 0.95rem;
+      color: #b0bab5;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      background: rgba(118, 160, 134, 0.12);
+      color: #a3e2bc;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+    .head   {
+            background-color : rgb(20, 22, 17) ;
+            min-height: 420px ;
+            width: 100%;
+            overflow: hidden;
+
+    /* 5. RESPONSIVE PHONE WRAPPERS */
+    @media (max-width: 768px) {
+      .wrapper { padding-top: 100px; }
+      .blog-container { grid-template-columns: 1fr; gap: 40px; }
+      .sidebar { position: static; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  
+/* =========================================================
+   RESPONSIVE LAYOUT OVERRIDES
+   Fits desktop, tablet and mobile screens without horizontal
+   scrolling. Existing content/design is preserved.
+   ========================================================= */
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.head {
+  width: 100%;
+  min-height: clamp(360px, 55vw, 650px);
+  height: auto;
+  padding: clamp(90px, 11vw, 150px) 5vw 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.head #img2 {
+  position: static;
+  display: block;
+  width: clamp(150px, 22vw, 250px);
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  margin: 0 auto 24px;
+  border-radius: 14px;
+}
+
+.head h1 {
+  float: none;
+  margin: 0 !important;
+  font-size: clamp(30px, 5vw, 58px);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.head h3 {
+  margin: 16px 0 0 !important;
+  font-size: clamp(14px, 2vw, 22px);
+  line-height: 1.5;
+}
+
+.nav-container {
+  width: min(1200px, 100%);
+  padding: 14px clamp(16px, 3vw, 28px);
+  gap: 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 22px;
+}
+
+nav a {
+  margin-left: 0;
+  font-size: 0.95rem;
+}
+
+.query,
+.portfolio {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.query .container {
+  width: min(1200px, 100%);
+  padding: 80px clamp(18px, 4vw, 40px);
+}
+
+.portfolio .about-section {
+  padding: 80px clamp(18px, 4vw, 40px);
+}
+
+.container,
+.about-container,
+.blog-container,
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contact-box,
+.info-box,
+.about-content,
+.skills-content,
+.sidebar,
+.blog-section {
+  min-width: 0;
+}
+
+.description,
+.about-text,
+.quote-text,
+.project-description,
+.blog-title {
+  overflow-wrap: anywhere;
+}
+
+.cta-group {
+  align-items: stretch;
+}
+
+.btn {
+  text-align: center;
+}
+
+.stats-grid {
+  flex-wrap: wrap;
+}
+
+.projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.project-card {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .query .container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .blog-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .head {
+    min-height: 430px;
+    padding: 100px 18px 45px;
+  }
+
+  .head #img2 {
+    width: 155px;
+    max-height: 200px;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    width: 100%;
+    gap: 6px 14px;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .query .container,
+  .portfolio .about-section {
+    padding: 55px 18px;
+  }
+
+  .section-title {
+    margin-top: 0 !important;
+  }
+
+  .sub-heading {
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  .description,
+  .about-text {
+    font-size: 15px;
+  }
+
+  .cta-group {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .cta-group .btn {
+    width: 100%;
+  }
+
+  .divider-text {
+    text-align: center;
+  }
+
+  .stats-grid {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .stat-number {
+    font-size: 40px;
+  }
+
+  .wrapper {
+    padding: 75px 18px 45px;
+  }
+
+  .blog-container {
+    margin-bottom: 65px;
+  }
+
+  .sidebar .main-title {
+    font-size: 2rem;
+  }
+
+  .blog-card {
+    padding: 20px;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .blog-title {
+    font-size: 1.05rem;
+  }
+
+  .projects-section {
+    padding-top: 55px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 24px;
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 380px) {
+  .head {
+    min-height: 400px;
+  }
+
+  nav {
+    gap: 5px 10px;
+  }
+
+  nav a {
+    font-size: 0.78rem;
+  }
+
+  .head h1 {
+    font-size: 28px;
+  }
+
+  .head h3 {
+    font-size: 13px;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <div id = "head-anchor" class = "head">
+        <br><br><br><br><br><br><br><br>
+        <img id = "img2" src = "https://media.canva.com/v2/image-resize/format:JPG/height:397/quality:92/uri:ifs%3A%2F%2FM%2Fd56f15a6-4f97-4f09-a2fc-7bc32230bbe7/watermark:F/width:307?csig=AAAAAAAAAAAAAAAAAAAAACj7jLdXfhd9DD10hmh5mvbGKofUGftgMv7O78PI8JeV&exp=1789568131&osig=AAAAAAAAAAAAAAAAAAAAAN8BcgiFfduV20Iea55un6duAmNC6gfQAE-QSrXkYw2R&signer=media-rpc&x-canva-quality=thumbnail_large">
+        <h1 style = "color:pink; margin-left:58%; margin-top:-15%"> ABHISHEK AGRAWAL 
+          <br><h3 style = "color:rgb(245, 253, 135); margin-left:58%; text-align:left;">Crafting beautiful, high-performing digital experiences. I turn complex problems into elegant, user-friendly web solutions.
+            </h3></h1>
+       <p>
+        <h3 style = "color:rgb(121, 235, 145); margin-left:58%; margin-top:2%; text-align:left;"> (WEB DEVELOPER AND DESIGNER) <br> </h3><br>
+    </p>
+</div>
+
+  <!-- GLOBAL STICKY NAVBAR -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">PORTFOLIO.</div>
+      <nav>
+        <a href="#blog-anchor">Blogs</a>
+        <a href="#projects-anchor">Projects</a>
+        <a href="#contact-anchor">Contact</a>
+        <a href="#about-anchor">About</a>
+        <a href="#head-anchor">Home</a>
+        <a href="#skills-heading">Skills</a>
+        
+      </nav>
+    </div>
+  </header>
+<div class = "query">
+  <section id="contact-anchor" class="contact-stats-section">
+  <div class="container">
+    
+    <!-- Contact Column -->
+    <div class="contact-box">
+      <h2 class="section-title" style="font-size: xx-large; text-align: left;">CONTACT</h2>
+      <h3 class="sub-heading">For any query & discussion</h3>
+      <p class="description">
+        Please feel free to contact me regarding web development and design projects.
+      </p>
+      
+      <div class="cta-group">
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSHwsCQrVLLbwSpNKKRRbkWvZLVbGFHmHsxdCJgcjsvzKHzLrFcNRzxQglhSlPvzHKJmQkFC" class="btn btn-primary">Send a Mail</a>
+        <span class="divider-text">OR</span>
+        <a href="tel:+916398044529" class="btn btn-secondary">+91 63980 44529</a>
+      </div>
+    </div>
+
+    <!-- Stats & Quote Column -->
+    <div class="info-box">
+      <blockquote class="quote">
+        "You can't use up creativity. The more you use, the more you have in your significant mind."
+      </blockquote>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">8</span>
+          <span class="stat-label">Months of Experience<br>as a Web Designer</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Satisfied Mini Projects<br>& Landing Pages</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+<div class ="portfolio">
+    <section id = "about-anchor" class="about-section">
+  <div class="about-container">
+    
+    <!-- Left Column: Introduction Text -->
+    <div class="about-content">
+      <span class="section-tag">Get to know me</span>
+      <h2 class="about-heading">About Me</h2>
+      
+      <p class="about-text highlight">
+        Hello, I'm <strong>Abhishek Agrawal</strong>. I completed my B.Tech in Computer Science & Engineering in 2024 from VBSPU, and I am excited to kickstart my professional journey.
+      </p>
+      
+      <p class="about-text">
+        I have always enjoyed math and science from a young age, which naturally led me to engineering. Currently, I am expanding my programming skills and love exploring real-world applications. I enjoy building impactful projects, solving complex problems, and collaborating with teams to make a difference.
+      </p>
+    </div>
+
+    <!-- Right Column: Skills Section -->
+    <div class="skills-content">
+      <h3 class="skills-heading" id = "skills-heading">Core Skills</h3>
+      <p class="skills-sub">Technologies and languages I work with:</p>
+      
+      <div class="skills-grid">
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Core Java</span>
+        <span class="skill-tag">PHP</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">GitHub</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+    
+</div>
+  <!-- BODY CONTENT CENTER ALIGNED -->
+  <div class="wrapper">
+
+    <!-- BLOG SECTION DASHBOARD -->
+    <section id="blog-anchor" class="blog-container">
+      
+      <!-- LEFT BLOCK INTERACTION OVERVIEW -->
+      <aside class="sidebar">
+        <h1>Blog</h1>
+        <div class="main-title">What's News<br>My Blogs And News</div>
+        
+        <div class="quote-box">
+          <p class="quote-label">Quote</p>
+          <p class="quote-text">"Amazing! Success is not the final, Failure is not the fatal: it is the courage to Continue that Counts."</p>
+          <p class="quote-author">— Winston Churchill</p>
+        </div>
+      </aside>
+
+      <!-- RIGHT BLOCK ELEMENT LIST -->
+      <main class="blog-section">
+        
+        <a href="https://www.projectmanager.com/blog/lessons-learned-project-management" class="blog-card">
+          <div class="blog-details">
+            <span class="blog-date">Feb 26 • Blog</span>
+            <h2 class="blog-title">Let this be a lesson to you</h2>
+          </div>
+          <div class="arrow-icon">➔</div>
+        </a>
+
+        <a href="https://quire.io/blog/p/time-tracking-in-project-management-guide.html" class="blog-card">
+          <div class="blog-details">
+            <span class="blog-date">Feb 19 • Blog</span>
+            <h2 class="blog-title">How do you use time tracking for Projects</h2>
+          </div>
+          <div class="arrow-icon">➔</div>
+        </a>
+
+        <a href="https://www.eresourcescheduler.com/blog/project-time-tracking" class="blog-card">
+          <div class="blog-details">
+            <span class="blog-date">Feb 9 • Blog</span>
+            <h2 class="blog-title">How do you use time tracking for Projects</h2>
+          </div>
+          <div class="arrow-icon">➔</div>
+        </a>
+
+      </main>
+    </section>
+
+
+    <!-- FEATURED WORK CARDS CONTAINER -->
+    <section id="projects-anchor" class="projects-section">
+      <h2 class="section-title">Featured Work</h2>
+      <p class="section-subtitle">What I've Built So Far</p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Online Hospital Management</h3>
+            <p class="project-description">Built a web platform for a hospital to manage internal records, user actions, and facility tracking smoothly.</p>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>E-Billing Platform</h3>
+            <p class="project-description">Designed a responsive frontend billing interface for stores to itemize customer invoices seamlessly.</p>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Institution Registration Form</h3>
+            <p class="project-description">Created a user registration system handling secure institutional form entries and data management.</p>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">PHP</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Row House Landing Page</h3>
+            <p class="project-description">Developed a sleek and modern landing page showcasing property layouts for real estate presentation.</p>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+<div class="project-card">
+          <div class="project-header">
+            <h3>Temperature Finder</h3>
+            <p class="project-description">Develop an Application Which can find exact Temperature of a place, Humidity, Moisture by just entering an City name.</p>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">JSON</span>
+          </div>
+        </div>
+        <!-- Project 6 -->
+<div class="project-card">
+          <div class="project-header">
+            <h3>Chess Game</h3>
+            <p class="project-description">Develop an Chess Game in which One player is Human and human needs to move their own chance and Second player is 
+                Computer, it plays as own
+            </p>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">Core Java</span>
+            <span class="tag">ecllipse</span>
+            <span class="tag">AI</span>
+          </div>
+        </div>
